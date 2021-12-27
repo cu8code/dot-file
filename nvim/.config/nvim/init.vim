@@ -15,7 +15,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
-" For vsnip users.
+" For vsnip users
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
@@ -30,20 +30,13 @@ Plug 'akinsho/toggleterm.nvim'
 " Auto pair
 Plug 'windwp/nvim-autopairs'
 
-" Wiki 
+" Wiki
 Plug 'vimwiki/vimwiki'
 
-" Statusine
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Color 
-Plug 'norcalli/nvim-colorizer.lua'
-
-" indent-blankline
 Plug 'lukas-reineke/indent-blankline.nvim'
-
 call plug#end()
+
+source $HOME/.config/nvim/settings.vim
 
 source $HOME/.config/nvim/conf/nvim-tree.vim
 source $HOME/.config/nvim/conf/telescope.vim
@@ -53,6 +46,3 @@ source $HOME/.config/nvim/conf/nvim-terminal.vim
 source $HOME/.config/nvim/conf/nvim-auto-pair.vim
 source $HOME/.config/nvim/conf/vimwiki.vim
 source $HOME/.config/nvim/conf/indent-blankline.vim
-source $HOME/.config/nvim/settings.vim
-
-lua require'colorizer'.setup()
