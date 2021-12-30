@@ -1,0 +1,12 @@
+require "user.options" 
+require "user.keymaps" 
+require "user.plugins" 
+require "user.cmp" 
+require "user.nvim-tree" 
+require "user.vim-bbye" 
+require "user.lualine" 
+require "user.toggleterm" 
+require "user.nvim-autopairs" 
+
+vim.o.background = "dark"
+vim.cmd "colorscheme darkplus"

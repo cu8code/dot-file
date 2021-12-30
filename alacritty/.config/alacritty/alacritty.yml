@@ -4,7 +4,7 @@ font:
 
 colors:
   primary:
-    background: '#0d4743'
+    background: '#4A0121'
 
-background_opacity: 1
+background_opacity: 0.80
 
