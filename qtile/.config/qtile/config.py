@@ -42,8 +42,13 @@ keys = [
             [MOD,"shift"],"x",lazy.spawn("shutdown 'now'")
             ),
         Key(
-            [MOD,"shift"],"p",lazy.spawncmd(),
+            [MOD],"p",lazy.spawncmd(),
             ),
+        # Sound
+        Key([], "XF86AudioMute", lazy.spawn("")),
+        Key([], "XF86AudioLowerVolume", lazy.spawn("pactl -- set-sink-volume 0 -10%")),
+        Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl -- set-sink-volume 0 +10%")),
+
         #MOVE FOCUS
         Key([MOD], "h", lazy.layout.left(), desc="Move focus to left"),
         Key([MOD], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -101,6 +106,8 @@ screens = [
                     widget.CurrentLayout(
                         font="Fire Code Italic",
                         ),
+                    widget.KeyboardLayout(),
+                    widget.TextBox('['),
                     widget.GroupBox(
                         fontsize=18,
                         boderwidth=3,
@@ -110,9 +117,11 @@ screens = [
                         highlight_method = "line",
                         underline_color = colorsList[2]
                         ),
+                    widget.TextBox(']'),
                     widget.WindowName(
                         padding = 0
                         ),
+                    widget.TextBox('['),
                     widget.Prompt(),
                     widget.Chord(
                         chords_colors={
@@ -121,11 +130,22 @@ screens = [
                         name_transform=lambda name: name.upper(),
                         ),
                     widget.Systray(),
+                    widget.TextBox(']'),
+                    widget.TextBox('['),
                     widget.Net(),
+                    widget.TextBox(']'),
+                    widget.TextBox('['),
+                    widget.TextBox(nf.icons['mdi_volume_low'] + '  ='),
+                    widget.Volume(),
+                    widget.TextBox(']'),
+                    widget.TextBox('['),
                     widget.Battery(charge_char=" ⚡"),
-                    widget.Clock(format="%Y-%m-%d || %a %I:%M %p",
+                    widget.TextBox(']'),
+                    widget.TextBox('['),
+                    widget.Clock(format="%Y-%m-%d %a %I:%M %p",
                         font="Fire Code Italic",
                         ),
+                    widget.TextBox(']'),
                     ],
                 24,
                 background=colorsList[2]
