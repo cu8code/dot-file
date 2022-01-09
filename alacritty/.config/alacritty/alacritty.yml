@@ -1,10 +1,7 @@
 font:
 
-  size: 9.0
+  size: 13.0
 
-colors:
-  primary:
-    background: '#4A0121'
 
-background_opacity: 0.80
+background_opacity: 1.0
 

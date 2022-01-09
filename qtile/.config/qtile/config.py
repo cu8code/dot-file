@@ -1,6 +1,6 @@
 from libqtile.config import Key, Group, Screen
 from libqtile.command import lazy
-from libqtile import bar, hook, widget 
+from libqtile import bar, hook, widget
 
 from libqtile.layout.bsp import Bsp
 from libqtile.layout.floating import Floating
@@ -10,14 +10,13 @@ import subprocess
 
 import nerdfonts as nf
 
-
 TERMINAL="alacritty"
 EDITOR="nvim"
-BROWSER="brave-browser"
+BROWSER="firefox"
 MOD="mod4"
 
 keys = [
-        #Launch Terminal 
+        #Launch Terminal
         Key(
             [MOD],"t",lazy.spawn(TERMINAL)
             ),
@@ -113,9 +112,11 @@ screens = [
                         boderwidth=3,
                         active=colorsList[0],
                         inactive='#ffffff',
+                        rounded = False,
                         highlight_color=colorsList[2],
                         highlight_method = "line",
-                        underline_color = colorsList[2]
+                        underline_color = colorsList[2],
+                        this_current_screen_border = colorsList[0],
                         ),
                     widget.TextBox(']'),
                     widget.WindowName(
@@ -153,7 +154,7 @@ screens = [
             ),
         ]
 print("screen loaded")
-@hook.subscribe.startup_once
+@hook.subscribe.startup
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.run([home])
