@@ -28,5 +28,25 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1654592580.4473844
+    },
+    "85acb3fe-a590-40e8-846b-7dc719379977": {
+        "id": "85acb3fe-a590-40e8-846b-7dc719379977",
+        "name": "Youtube",
+        "keyword": "yt",
+        "cmd": "https://www.youtube.com/results?search_query=%s",
+        "icon": "~/Pictures/icons/youtube.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1654658961.7366881
+    },
+    "57423cca-f82f-43ca-af97-7cfd5a8fcda1": {
+        "id": "57423cca-f82f-43ca-af97-7cfd5a8fcda1",
+        "name": "Github",
+        "keyword": "gh",
+        "cmd": "https://github.com/search?q=%s",
+        "icon": "~/Pictures/icons/icons8-github-100.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1654659400.5577474
     }
 }

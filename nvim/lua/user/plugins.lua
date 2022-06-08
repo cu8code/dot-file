@@ -46,6 +46,14 @@ return packer.startup(function(use)
     run = ":TSUpdate"
   }
 
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
