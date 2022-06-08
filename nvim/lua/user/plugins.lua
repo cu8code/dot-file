@@ -40,12 +40,16 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  use "wbthomason/packer.nvim"
+
+
+  -- TreeSitter 
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate"
   }
 
+  -- File Manager
   use {
       'kyazdani42/nvim-tree.lua',
       requires = {
@@ -54,10 +58,26 @@ return packer.startup(function(use)
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- Color 
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use "hrsh7th/nvim-cmp"
+
+-- For vsnip users.
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+-- For luasnip users.
+  use 'saadparwaiz1/cmp_luasnip'
+  use "rafamadriz/friendly-snippets"
+  use "L3MON4D3/LuaSnip"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
