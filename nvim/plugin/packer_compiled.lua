@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["aw-watcher-vim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/aw-watcher-vim",
+    url = "https://github.com/ActivityWatch/aw-watcher-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["code_runner.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
   },
   ["darkplus.nvim"] = {
     loaded = true,
@@ -144,6 +154,16 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -153,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

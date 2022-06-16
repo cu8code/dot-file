@@ -17,10 +17,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost plugins.lua source <afile> | PackerSync
+augroup end
 ]]
 
 -- Use a protected call so we don't error out on first use
@@ -40,7 +40,12 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+  use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
   use "wbthomason/packer.nvim"
+
+  use "ActivityWatch/aw-watcher-vim"
+
+  use "vimwiki/vimwiki"
 
 
   -- TreeSitter 
@@ -51,11 +56,17 @@ return packer.startup(function(use)
 
   -- File Manager
   use {
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- Color 
@@ -70,14 +81,14 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use "hrsh7th/nvim-cmp"
 
--- For vsnip users.
+  -- For vsnip users.
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
--- For luasnip users.
-  use 'saadparwaiz1/cmp_luasnip'
-  use "rafamadriz/friendly-snippets"
+  -- For luasnip users.
   use "L3MON4D3/LuaSnip"
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

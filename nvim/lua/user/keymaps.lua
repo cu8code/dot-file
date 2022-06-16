@@ -62,3 +62,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+
+-- RunCode
+keymap('n', '<C-r>', ':RunCode<CR>', { noremap = true, silent = false })
+
