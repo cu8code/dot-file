@@ -42,11 +42,8 @@ packer.init {
 return packer.startup(function(use)
   use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
   use "wbthomason/packer.nvim"
-
   use "ActivityWatch/aw-watcher-vim"
-
   use "vimwiki/vimwiki"
-
 
   -- TreeSitter 
   use {
@@ -62,7 +59,6 @@ return packer.startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -89,6 +85,17 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
+
+  -- FORMAT
+  use 'sbdchd/neoformat'
+
+  -- Auto pair
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+  -- auto tag 
+  use 'windwp/nvim-ts-autotag'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
