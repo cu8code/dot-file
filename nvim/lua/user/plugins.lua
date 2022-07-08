@@ -51,15 +51,6 @@ return packer.startup(function(use)
     run = ":TSUpdate"
   }
 
-  -- File Manager
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -97,6 +88,19 @@ return packer.startup(function(use)
   -- auto tag 
   use 'windwp/nvim-ts-autotag'
 
+  -- multi cursor
+  use 'mg979/vim-visual-multi'
+
+  -- Neotree
+use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

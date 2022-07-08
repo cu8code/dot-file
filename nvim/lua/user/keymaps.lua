@@ -48,3 +48,5 @@ keymap('n', '<C-r>', ':RunCode<CR>', { noremap = true, silent = false })
 -- FormatCode
 keymap('n', '<C-f>', ':Neoformat<CR>', { noremap = true, silent = false })
 
+-- NeoTree
+vim.cmd([[nnoremap \ :Neotree source=filesystem reveal<cr>]])
