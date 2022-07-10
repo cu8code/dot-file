@@ -43,10 +43,15 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- RunCode
-keymap('n', '<C-r>', ':RunCode<CR>', { noremap = true, silent = false })
+keymap('n', 'r', ':RunCode<CR>', { noremap = true, silent = true })
 
 -- FormatCode
-keymap('n', '<C-f>', ':Neoformat<CR>', { noremap = true, silent = false })
+keymap('n', 'f', ':Neoformat<CR>', { noremap = true, silent = true })
+
+-- Telescope
+keymap('n', 'g', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+keymap('n', 'm', ':Telescope man_pages<CR>', { noremap = true, silent = true })
+
 
 -- NeoTree
-vim.cmd([[nnoremap \ :Neotree source=filesystem reveal<cr>]])
+vim.cmd([[nnoremap \ :Neotree right source=filesystem reveal<cr>]])
