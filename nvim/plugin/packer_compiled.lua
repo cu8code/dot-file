@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/aw-watcher-vim",
     url = "https://github.com/ActivityWatch/aw-watcher-vim"
   },
+  ["clipboard-image.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/clipboard-image.nvim",
+    url = "https://github.com/ekickx/clipboard-image.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -123,6 +128,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["mdeval.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/mdeval.nvim",
+    url = "https://github.com/jubnzv/mdeval.nvim"
+  },
+  ["mkdnflow.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/mkdnflow.nvim",
+    url = "https://github.com/jakewvincent/mkdnflow.nvim"
   },
   ["neo-tree.nvim"] = {
     loaded = true,
@@ -199,11 +219,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

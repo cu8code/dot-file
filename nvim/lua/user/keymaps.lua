@@ -49,8 +49,9 @@ keymap('n', 'r', ':RunCode<CR>', { noremap = true, silent = true })
 keymap('n', 'f', ':Neoformat<CR>', { noremap = true, silent = true })
 
 -- Telescope
-keymap('n', 'g', ':Telescope live_grep<CR>', { noremap = true, silent = true })
-keymap('n', 'm', ':Telescope man_pages<CR>', { noremap = true, silent = true })
+keymap('n', '<S-g>', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+keymap('n', '<S-m>', ':Telescope man_pages<CR>', { noremap = true, silent = true })
+keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 
 -- NeoTree

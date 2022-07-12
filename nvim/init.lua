@@ -15,5 +15,5 @@ require "user.neotree"
 
 vim.g.tokyonight_style = "night"
 vim.cmd [[ 
-colorscheme tokyonight 
+colorscheme github_dark
 ]]

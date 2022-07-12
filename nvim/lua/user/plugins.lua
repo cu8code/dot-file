@@ -43,7 +43,11 @@ return packer.startup(function(use)
   use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
   use "wbthomason/packer.nvim"
   use "ActivityWatch/aw-watcher-vim"
-  use "vimwiki/vimwiki"
+
+  -- Markdown
+  use "jakewvincent/mkdnflow.nvim"
+  use "ekickx/clipboard-image.nvim"
+  use "jubnzv/mdeval.nvim"
 
   -- TreeSitter 
   use {
@@ -59,6 +63,7 @@ return packer.startup(function(use)
   -- Color 
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
+  use ({ 'projekt0n/github-nvim-theme' })
 
   -- LSP
   use 'neovim/nvim-lspconfig'

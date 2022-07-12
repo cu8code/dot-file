@@ -8,6 +8,7 @@ require('code_runner').setup({
 		python = "python3 -u",
 		typescript =  "deno run",
 		rust = "cd $dir && cargo run",
-    cpp = "cd $dir && mkdir -p bin && g++ $fileName -o ./bin/main && ./bin/main"
+    cpp = "cd $dir && mkdir -p bin && g++ $fileName -o ./bin/main && ./bin/main",
+    c = "cd $dir && mkdir -p bin && gcc -Wall $fileName -o ./bin/main && ./bin/main"
 	},
 })

@@ -14,9 +14,10 @@ local options = {
   smartcase = true,                        -- smart case
   smartindent = true,                      -- make indenting smarter again
   splitbelow = true,                       -- force all horizontal splits to go below current window
-  splitright = true,                       -- force all vertical splits to go to the right of current window
+  splitright = false,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
   -- termguicolors = true,                    -- set term gui colors (most terminals support this)
+  colorcolumn='80',
   timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
@@ -43,7 +44,7 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]]
+vim.cmd [[set formatoptions-=tc]]
 vim.cmd [[ nnoremap Y "+y
 vnoremap Y "+y
 nnoremap yY ^"+y$ 
