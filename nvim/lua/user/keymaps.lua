@@ -43,14 +43,13 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- RunCode
-keymap('n', 'r', ':RunCode<CR>', { noremap = true, silent = true })
+keymap('n', '<S-r>', ':RunCode<CR>', { noremap = true, silent = true })
 
 -- FormatCode
-keymap('n', 'f', ':Neoformat<CR>', { noremap = true, silent = true })
+keymap('n', '<S-f>', ':Neoformat<CR>', { noremap = true, silent = true })
 
 -- Telescope
-keymap('n', '<S-g>', ':Telescope live_grep<CR>', { noremap = true, silent = true })
-keymap('n', '<S-m>', ':Telescope man_pages<CR>', { noremap = true, silent = true })
+keymap('n', '<S-m>', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 
