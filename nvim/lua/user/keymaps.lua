@@ -54,4 +54,4 @@ keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = tr
 
 
 -- NeoTree
-vim.cmd([[nnoremap \ :Neotree right source=filesystem reveal<cr>]])
+vim.cmd([[nnoremap \ :Neotree float source=filesystem reveal<cr>]])
