@@ -88,7 +88,7 @@ return packer.startup(function(use)
   -- Auto pair
   use {
     "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
+    config = function() require("nvim-autopairs").setup {} end
   }
   -- auto tag 
   use 'windwp/nvim-ts-autotag'
@@ -97,14 +97,20 @@ return packer.startup(function(use)
   use 'mg979/vim-visual-multi'
 
   -- Neotree
-use {
-  "nvim-neo-tree/neo-tree.nvim",
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = { 
       "nvim-lua/plenary.nvim",
       "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
+  }
+
+  -- bar
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
   }
   if PACKER_BOOTSTRAP then
     require("packer").sync()

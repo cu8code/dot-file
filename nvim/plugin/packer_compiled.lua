@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/aw-watcher-vim",
     url = "https://github.com/ActivityWatch/aw-watcher-vim"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["clipboard-image.nvim"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/clipboard-image.nvim",
