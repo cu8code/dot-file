@@ -112,6 +112,10 @@ return packer.startup(function(use)
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+
+  -- terminal
+  use 'akinsho/toggleterm.nvim'
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
