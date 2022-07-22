@@ -91,7 +91,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<S-r>', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<S-a>', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<S-f>', vim.lsp.buf.formatting, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
