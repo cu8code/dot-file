@@ -58,6 +58,6 @@ keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = tr
 vim.cmd([[nnoremap \ :Neotree float source=filesystem reveal<cr>
 
 " LazyGit
-nnoremap <silent> <leader>gg :LazyGit<CR>
+nnoremap <silent> 1 :LazyGit<CR>
 ]])
 
