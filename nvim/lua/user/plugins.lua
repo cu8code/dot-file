@@ -116,6 +116,15 @@ return packer.startup(function(use)
   -- terminal
   use 'akinsho/toggleterm.nvim'
 
+  -- see indentaion
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- git
+  use {
+    'lewis6991/gitsigns.nvim',
+  }
+  use "kdheepak/lazygit.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

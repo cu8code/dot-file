@@ -1,1 +1,1 @@
-alias n=nvim
+alias n=neovide --maximized
