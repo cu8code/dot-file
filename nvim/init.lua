@@ -3,7 +3,7 @@ require "user.keymaps"
 require "user.plugins"
 
 require "user.treesitter"
-require "user.cmp"
+require "user.cmpLspConfig"
 require "user.luasnip"
 require "user.telescope"
 require "user.code_runner"
