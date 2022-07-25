@@ -54,14 +54,14 @@ keymap('n', '<S-m>', ':Telescope live_grep<CR>', { noremap = true, silent = true
 keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 -- Luasnip
-vim.keymap.set({"i","s"},"<c-j>",function()
+vim.keymap.set({"i","s"},"<c-k>",function()
   local luasnip=require("luasnip")
   if luasnip.jumpable(-1) then
     luasnip.jump(-1)
   end
 end,term_opts)
 
-vim.keymap.set({"i","s"},"<c-k>",function()
+vim.keymap.set({"i","s"},"<c-j>",function()
   local luasnip=require("luasnip")
   if luasnip.jumpable(1) then
     luasnip.jump(1)
