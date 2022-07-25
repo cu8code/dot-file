@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
   return
@@ -7,8 +8,6 @@ local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
   return
 end
-
-require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -156,10 +155,9 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
-  vim.keymap.set('n', '<space>d', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', '<s-r>', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', '<s-2>', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<s-3>', vim.lsp.buf.references, bufopts)
 end
 
 local lsp_flags = {
@@ -190,4 +188,29 @@ require('lspconfig')['clangd'].setup{
 require('lspconfig')['gopls'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
+}
+
+require'lspconfig'.sumneko_lua.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }

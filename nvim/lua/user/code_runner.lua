@@ -1,5 +1,4 @@
-ter="alacritty"
-loop="while true\n do echo\n 'Do something; hit [CTRL+C] to stop!'\n done"
+TER="alacritty"
 
 require('code_runner').setup({
   -- put here the commands by filetype
