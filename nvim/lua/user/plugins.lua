@@ -45,86 +45,114 @@ return packer.startup(function(use)
   use "ActivityWatch/aw-watcher-vim"
 
   -- Markdown
-  use "jakewvincent/mkdnflow.nvim"
-  use "ekickx/clipboard-image.nvim"
-  use "jubnzv/mdeval.nvim"
+  use({'jakewvincent/mkdnflow.nvim',
+  rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+  config = function()
+    require('mkdnflow').setup({})
+  end
+})
+use "ekickx/clipboard-image.nvim"
+use "jubnzv/mdeval.nvim"
 
-  -- TreeSitter 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ":TSUpdate"
+-- TreeSitter 
+use {
+  'nvim-treesitter/nvim-treesitter',
+  run = ":TSUpdate"
+}
+
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+
+-- Color 
+use "lunarvim/darkplus.nvim"
+use "folke/tokyonight.nvim"
+use ({ 'projekt0n/github-nvim-theme' })
+
+-- LSP
+use 'neovim/nvim-lspconfig'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+use 'hrsh7th/cmp-nvim-lsp'
+use "hrsh7th/nvim-cmp"
+use({
+  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  config = function()
+    require("lsp_lines").setup()
+  end,
+})
+-- For vsnip users.
+use 'hrsh7th/cmp-vsnip'
+use 'hrsh7th/vim-vsnip'
+
+-- For luasnip users.
+use "L3MON4D3/LuaSnip"
+use 'saadparwaiz1/cmp_luasnip'
+use 'rafamadriz/friendly-snippets'
+
+-- FORMAT
+use 'sbdchd/neoformat'
+
+-- auto tag 
+use 'windwp/nvim-ts-autotag'
+
+-- multi cursor
+use 'mg979/vim-visual-multi'
+
+-- Neotree
+use {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v2.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
   }
+}
+
+-- bar
+use {
+  'romgrk/barbar.nvim',
+  requires = {'kyazdani42/nvim-web-devicons'}
+}
+
+-- terminal
+use 'akinsho/toggleterm.nvim'
+
+-- see indentaion
+use "lukas-reineke/indent-blankline.nvim"
+
+-- git
+use {
+  'lewis6991/gitsigns.nvim',
+}
+use "kdheepak/lazygit.nvim"
+
+-- spell
+use({"jose-elias-alvarez/null-ls.nvim",
+config=function ()
+  require("null-ls").setup({
+    sources = {
+      require("null-ls").builtins.completion.spell,
+    },
+  })
+end
+  })
+
+  -- colorizer
+  use({
+    "norcalli/nvim-colorizer.lua",
+    config=function ()
+      require'colorizer'.setup()
+    end
+  })
 
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
-  -- Color 
-  use "lunarvim/darkplus.nvim"
-  use "folke/tokyonight.nvim"
-  use ({ 'projekt0n/github-nvim-theme' })
-
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use "hrsh7th/nvim-cmp"
-
-  -- For vsnip users.
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-
-  -- For luasnip users.
-  use "L3MON4D3/LuaSnip"
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'rafamadriz/friendly-snippets'
-
-  -- FORMAT
-  use 'sbdchd/neoformat'
-
-  -- Auto pair
-  use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
-  -- auto tag 
-  use 'windwp/nvim-ts-autotag'
-
-  -- multi cursor
-  use 'mg979/vim-visual-multi'
-
-  -- Neotree
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
-  }
-
-  -- bar
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
-
-  -- terminal
-  use 'akinsho/toggleterm.nvim'
-
-  -- see indentaion
-  use "lukas-reineke/indent-blankline.nvim"
-
-  -- git
-  use {
-    'lewis6991/gitsigns.nvim',
-  }
-  use "kdheepak/lazygit.nvim"
-
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

@@ -154,12 +154,24 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
+  ["lsp_lines.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0" },
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mdeval.nvim"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/mdeval.nvim",
     url = "https://github.com/jubnzv/mdeval.nvim"
   },
   ["mkdnflow.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rmkdnflow\frequire\0" },
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/mkdnflow.nvim",
     url = "https://github.com/jakewvincent/mkdnflow.nvim"
@@ -179,16 +191,22 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
-  ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+  ["null-ls.nvim"] = {
+    config = { "\27LJ\2\n‚\1\0\0\a\0\b\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0004\3\3\0006\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\4\0049\4\5\4>\4\1\3=\3\a\2B\0\2\1K\0\1\0\fsources\1\0\0\nspell\15completion\rbuiltins\nsetup\fnull-ls\frequire\0" },
     loaded = true,
-    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -248,10 +266,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
+-- Config for: mkdnflow.nvim
+time([[Config for mkdnflow.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rmkdnflow\frequire\0", "config", "mkdnflow.nvim")
+time([[Config for mkdnflow.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+try_loadstring("\27LJ\2\n‚\1\0\0\a\0\b\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0004\3\3\0006\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\4\0049\4\5\4>\4\1\3=\3\a\2B\0\2\1K\0\1\0\fsources\1\0\0\nspell\15completion\rbuiltins\nsetup\fnull-ls\frequire\0", "config", "null-ls.nvim")
+time([[Config for null-ls.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
+time([[Config for lsp_lines.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
