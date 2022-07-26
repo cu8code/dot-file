@@ -136,6 +136,7 @@ config=function ()
   require("null-ls").setup({
     sources = {
       require("null-ls").builtins.completion.spell,
+      require("null-ls").builtins.diagnostics.write_good.write,
     },
   })
 end
@@ -149,6 +150,7 @@ end
     end
   })
 
+  -- lua line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }

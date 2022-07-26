@@ -102,7 +102,6 @@ cmp.setup {
       vim_item.menu = ({
         luasnip = "[Snippet]",
         nvim_lsp = "[LSP]",
-        path = "[Path]",
         buffer = "[Buffer]",
       })[entry.source.name]
       return vim_item
@@ -156,8 +155,8 @@ local on_attach = function(client, bufnr)
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
   vim.keymap.set('n', '<s-r>', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<s-2>', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', '<s-3>', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', '<S-a>', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<S-3>', vim.lsp.buf.references, bufopts)
 end
 
 local lsp_flags = {
