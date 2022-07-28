@@ -1,4 +1,4 @@
-local opts = { noremap = true, silent = true }
+local opts = { silent = true, noremap = true }
 
 local term_opts = { silent = true }
 
@@ -44,14 +44,14 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- RunCode
-keymap('n', '<S-r>', ':RunCode<CR>', { noremap = true, silent = true })
+keymap('n', '<S-r>', ':RunCode<CR>', opts)
 
 -- FormatCode
-keymap('n', '<S-f>', ':Neoformat<CR>', { noremap = true, silent = true })
+keymap('n', '<S-f>', ':Neoformat<CR>', opts)
 
 -- Telescope
-keymap('n', '<S-m>', ':Telescope live_grep<CR>', { noremap = true, silent = true })
-keymap('n', '<S-d>', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
+keymap('n', '<S-m>', ':Telescope live_grep<CR>', opts)
+keymap('n', '<S-d>', ':Telescope diagnostics<CR>', opts)
 
 -- Luasnip
 vim.keymap.set({"i","s"},"<c-k>",function()
