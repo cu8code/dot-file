@@ -16,7 +16,8 @@ require "user.lualine"
 
 vim.g.tokyonight_style = "night"
 vim.cmd [[ 
-colorscheme github_dark
+colorscheme github_dimmed
 
 let g:neovide_remember_window_size = v:true
+let g:neovide_cursor_vfx_mode = ""
 ]]
