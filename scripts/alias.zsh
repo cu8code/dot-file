@@ -1,2 +1,2 @@
 alias n=neovide
-alias g=lazygit
+alias g=lazygit;
