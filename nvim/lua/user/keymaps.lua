@@ -68,8 +68,13 @@ vim.keymap.set({"i","s"},"<c-j>",function()
   end
 end,term_opts)
 
--- NeoTree
-vim.cmd([[nnoremap \ :Neotree float source=filesystem reveal<cr>
+-- disable some default keymap
+keymap('n', 'q', ':echo "pressed q" <CR>', opts)
+keymap('n', '@', ':echo "pressed @"<CR>', opts)
+
+vim.cmd([[
+" NeoTree
+nnoremap <silent> 2 :Neotree float source=filesystem reveal<cr>
 
 " LazyGit
 nnoremap <silent> 1 :LazyGit<CR>

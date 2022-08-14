@@ -119,7 +119,7 @@ use {
 }
 
 -- terminal
-use 'akinsho/toggleterm.nvim'
+-- use 'akinsho/toggleterm.nvim'
 
 -- see indentaion
 use "lukas-reineke/indent-blankline.nvim"
@@ -135,8 +135,10 @@ use({"jose-elias-alvarez/null-ls.nvim",
 config=function ()
   require("null-ls").setup({
     sources = {
-      require("null-ls").builtins.completion.spell,
-      require("null-ls").builtins.diagnostics.write_good.write,
+      require("null-ls").builtins.completion.spell.with({
+        filetypes={"markdown"}
+      }),
+      require("null-ls").builtins.diagnostics.write_good,
     },
   })
 end
@@ -154,6 +156,16 @@ end
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
   }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
