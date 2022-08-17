@@ -44,7 +44,7 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- RunCode
-keymap('n', '<S-r>', ':RunCode<CR>', opts)
+keymap('n', '3', ':RunCode<CR>', opts)
 
 -- FormatCode
 keymap('n', '<S-f>', ':Neoformat<CR>', opts)
@@ -78,5 +78,11 @@ nnoremap <silent> 2 :Neotree float source=filesystem reveal<cr>
 
 " LazyGit
 nnoremap <silent> 1 :LazyGit<CR>
+
+" Stop uisng this key
+nnoremap <BS> :echo "no backspace bro you are using vim"<CR>
+
+" Cursor
+set guicursor=i:block
 ]])
 
