@@ -68,9 +68,6 @@ vim.keymap.set({"i","s"},"<c-j>",function()
   end
 end,term_opts)
 
--- disable some default keymap
-keymap('n', 'q', ':echo "pressed q" <CR>', opts)
-keymap('n', '@', ':echo "pressed @"<CR>', opts)
 
 vim.cmd([[
 " NeoTree
@@ -79,10 +76,15 @@ nnoremap <silent> 2 :Neotree float source=filesystem reveal<cr>
 " LazyGit
 nnoremap <silent> 1 :LazyGit<CR>
 
-" Stop uisng this key
+" Disable backspace
 nnoremap <BS> :echo "no backspace bro you are using vim"<CR>
+inoremap <BS> <C-o>:echo "no backspace bro you are using vim"<CR>
 
-" Cursor
-set guicursor=i:block
 ]])
+
+-- disable some default keymap
+keymap('n', 'q', ':echo "pressed q" <CR>', opts)
+keymap('n', '@', ':echo "pressed @"<CR>', opts)
+
+
 
