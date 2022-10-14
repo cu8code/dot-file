@@ -42,7 +42,6 @@ packer.init {
 return packer.startup(function(use)
   use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
   use "wbthomason/packer.nvim"
-  use "ActivityWatch/aw-watcher-vim"
 
   -- Markdown
   use({'jakewvincent/mkdnflow.nvim',
@@ -77,12 +76,12 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/cmp-nvim-lsp'
 use "hrsh7th/nvim-cmp"
-use({
-  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-  config = function()
-    require("lsp_lines").setup()
-  end,
-})
+-- use({
+--   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+--   config = function()
+--     require("lsp_lines").setup()
+--   end,
+-- })
 -- For vsnip users.
 use 'hrsh7th/cmp-vsnip'
 use 'hrsh7th/vim-vsnip'
@@ -94,9 +93,6 @@ use 'rafamadriz/friendly-snippets'
 
 -- FORMAT
 use 'sbdchd/neoformat'
-
--- auto tag 
-use 'windwp/nvim-ts-autotag'
 
 -- multi cursor
 use 'mg979/vim-visual-multi'
@@ -117,9 +113,6 @@ use {
   'romgrk/barbar.nvim',
   requires = {'kyazdani42/nvim-web-devicons'}
 }
-
--- terminal
--- use 'akinsho/toggleterm.nvim'
 
 -- see indentaion
 use "lukas-reineke/indent-blankline.nvim"

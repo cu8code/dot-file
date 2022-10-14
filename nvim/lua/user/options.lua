@@ -16,7 +16,7 @@ local options = {
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = false,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
+  termguicolors = true,                    -- set term gui colors (most terminals support this)
   colorcolumn='80',
   timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
@@ -42,12 +42,13 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.diagnostic.config({virtual_text = false})
+vim.diagnostic.config({virtual_text = true})
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=tc]]
-vim.cmd [[ nnoremap Y "+y
+vim.cmd [[ 
 vnoremap Y "+y
 nnoremap yY ^"+y$ 
+nnoremap Y "+y
 ]]
