@@ -38,10 +38,10 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- RunCode
 keymap('n', '3', ':RunCode<CR>', opts)
@@ -80,6 +80,7 @@ nnoremap <silent> 1 :LazyGit<CR>
 nnoremap <BS> :echo "no backspace bro you are using vim"<CR>
 inoremap <BS> <C-o>:echo "no backspace bro you are using vim"<CR>
 
+nnoremap <F5> :pu=strftime('%c')<CR>
 ]])
 
 -- disable some default keymap

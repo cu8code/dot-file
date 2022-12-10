@@ -51,16 +51,16 @@ cmp.setup {
     end,
   },
   mapping = {
-    -- ["<C-k>"] = cmp.mapping.select_prev_item(),
-    -- ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    -- ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+    -- ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     -- ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ["<C-e>"] = cmp.mapping {
+    --[[ ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
-    },
+    }, ]]
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm { select = true },
@@ -130,10 +130,10 @@ cmp.setup {
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+-- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+-- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -149,14 +149,14 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  vim.keymap.set('n', '<space>wl', function()
+  --[[ vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+  vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts) ]]
+  --[[ vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, bufopts)
-  vim.keymap.set('n', '<s-r>', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<S-a>', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', '<S-3>', vim.lsp.buf.references, bufopts)
+  end, bufopts) ]]
+  vim.keymap.set('n', 'cr', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', 'c3', vim.lsp.buf.references, bufopts)
 end
 
 local lsp_flags = {
@@ -169,20 +169,20 @@ require('lspconfig')['tsserver'].setup{
   flags = lsp_flags,
 }
 
---require('lspconfig')['denols'].setup{
---  on_attach = on_attach,
---  flags = lsp_flags,
---}
+-- require('lspconfig')['denols'].setup{
+--   on_attach = on_attach,
+--   flags = lsp_flags,
+-- }
 
 require('lspconfig')['rust_analyzer'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
--- require('lspconfig')['clangd'].setup{
---   on_attach = on_attach,
---   flags = lsp_flags,
--- }
+require('lspconfig')['clangd'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
 
 require('lspconfig')['gopls'].setup{
   on_attach = on_attach,

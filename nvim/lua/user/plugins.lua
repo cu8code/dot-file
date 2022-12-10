@@ -123,20 +123,6 @@ use {
 }
 use "kdheepak/lazygit.nvim"
 
--- spell
-use({"jose-elias-alvarez/null-ls.nvim",
-config=function ()
-  require("null-ls").setup({
-    sources = {
-      require("null-ls").builtins.completion.spell.with({
-        filetypes={"markdown"}
-      }),
-      require("null-ls").builtins.diagnostics.write_good,
-    },
-  })
-end
-  })
-
   -- colorizer
   use({
     "norcalli/nvim-colorizer.lua",
@@ -159,6 +145,13 @@ end
         -- refer to the configuration section below
       }
     end
+  }
+  use {
+    'numToStr/Comment.nvim',
+    config = function ()
+      require('Comment').setup()
+    end
+
   }
   if PACKER_BOOTSTRAP then
     require("packer").sync()

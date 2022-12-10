@@ -26,6 +26,7 @@ local options = {
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
+  cursorcolumn = true,                       -- highlight the current column 
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
@@ -36,13 +37,17 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
-vim.opt.shortmess:append "c"
+local opt = vim.opt
+opt.shortmess:append "c"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
 vim.diagnostic.config({virtual_text = true})
+
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

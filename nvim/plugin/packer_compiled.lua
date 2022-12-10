@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
+    loaded = true,
+    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -185,12 +191,6 @@ _G.packer_plugins = {
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
-  ["null-ls.nvim"] = {
-    config = { "\27LJ\2\nè\1\0\0\b\0\14\0\0286\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0004\3\3\0006\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\4\0049\4\5\0049\4\6\0045\6\b\0005\a\a\0=\a\t\6B\4\2\2>\4\1\0036\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\n\0049\4\v\4>\4\2\3=\3\r\2B\0\2\1K\0\1\0\fsources\1\0\0\15write_good\16diagnostics\14filetypes\1\0\0\1\2\0\0\rmarkdown\twith\nspell\15completion\rbuiltins\nsetup\fnull-ls\frequire\0" },
-    loaded = true,
-    path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/ankanroy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -256,22 +256,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 -- Config for: mkdnflow.nvim
 time([[Config for mkdnflow.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rmkdnflow\frequire\0", "config", "mkdnflow.nvim")
 time([[Config for mkdnflow.nvim]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-try_loadstring("\27LJ\2\nè\1\0\0\b\0\14\0\0286\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0004\3\3\0006\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\4\0049\4\5\0049\4\6\0045\6\b\0005\a\a\0=\a\t\6B\4\2\2>\4\1\0036\4\0\0'\6\1\0B\4\2\0029\4\3\0049\4\n\0049\4\v\4>\4\2\3=\3\r\2B\0\2\1K\0\1\0\fsources\1\0\0\15write_good\16diagnostics\14filetypes\1\0\0\1\2\0\0\rmarkdown\twith\nspell\15completion\rbuiltins\nsetup\fnull-ls\frequire\0", "config", "null-ls.nvim")
-time([[Config for null-ls.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
