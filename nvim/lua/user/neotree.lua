@@ -79,7 +79,7 @@ require("neo-tree").setup({
       },
     },
     window = {
-      position = "float",
+      position = "right",
       width = 40,
       mapping_options = {
         noremap = true,
@@ -112,13 +112,13 @@ require("neo-tree").setup({
         ["y"] = "copy_to_clipboard",
         ["x"] = "cut_to_clipboard",
         ["p"] = "paste_from_clipboard",
-        ["c"] = "copy", -- takes text input for destination, also accepts the optional config.show_path option like "add":
-        -- ["c"] = {
-          --  "copy",
-          --  config = {
-            --    show_path = "none" -- "none", "relative", "absolute"
-            --  }
-            --}
+        -- ["c"] = "copy", -- takes text input for destination, also accepts the optional config.show_path option like "add":
+        ["c"] = {
+           "copy",
+           config = {
+               show_path = "relative" -- "none", "relative", "absolute"
+             },
+            },
             ["m"] = "move", -- takes text input for destination, also accepts the optional config.show_path option like "add".
             ["q"] = "close_window",
             ["R"] = "refresh",
@@ -128,12 +128,12 @@ require("neo-tree").setup({
         nesting_rules = {},
         filesystem = {
           filtered_items = {
-            visible = false, -- when true, they will just be displayed differently than normal items
+            visible = true, -- when true, they will just be displayed differently than normal items
             hide_dotfiles = true,
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
-              --"node_modules"
+              "node_modules"
             },
             hide_by_pattern = { -- uses glob style patterns
             --"*.meta"

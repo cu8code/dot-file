@@ -71,16 +71,15 @@ end,term_opts)
 
 vim.cmd([[
 " NeoTree
-nnoremap <silent> 2 :Neotree float source=filesystem reveal<cr>
+nnoremap <silent> 2 :Neotree right source=filesystem toggle<cr>
 
 " LazyGit
 nnoremap <silent> 1 :LazyGit<CR>
 
 " Disable backspace
-nnoremap <BS> :echo "no backspace bro you are using vim"<CR>
-inoremap <BS> <C-o>:echo "no backspace bro you are using vim"<CR>
+nnoremap <BS> :echo "no backspace in normal mode bro you are using vim"<CR>
 
-nnoremap <F5> :pu=strftime('%c')<CR>
+nnoremap <F5> :put=strftime('%c')<CR>
 ]])
 
 -- disable some default keymap
