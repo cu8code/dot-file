@@ -123,6 +123,20 @@ use {
 }
 use "kdheepak/lazygit.nvim"
 
+-- spell
+use({"jose-elias-alvarez/null-ls.nvim",
+config=function ()
+  require("null-ls").setup({
+    sources = {
+      require("null-ls").builtins.completion.spell.with({
+        filetypes={"markdown"}
+      }),
+      require("null-ls").builtins.diagnostics.write_good,
+    },
+  })
+end
+  })
+
   -- colorizer
   use({
     "norcalli/nvim-colorizer.lua",
@@ -153,6 +167,28 @@ use "kdheepak/lazygit.nvim"
     end
 
   }
+  use{
+    'windwp/nvim-ts-autotag',
+    config = function ()
+    require'nvim-treesitter.configs'.setup {
+      autotag = {
+        enable = true,
+      }
+    }
+    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics,
+    {
+        underline = true,
+        virtual_text = {
+            spacing = 5,
+            severity_limit = 'Warning',
+        },
+        update_in_insert = true,
+    }
+)
+    end
+  }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
