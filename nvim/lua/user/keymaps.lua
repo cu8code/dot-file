@@ -85,6 +85,7 @@ nnoremap <F5> :put=strftime('%c')<CR>
 -- disable some default keymap
 keymap('n', 'q', ':echo "pressed q" <CR>', opts)
 keymap('n', '@', ':echo "pressed @"<CR>', opts)
+keymap('n', 'c', ':echo "pressed c"<CR>', opts)
 
 
 
