@@ -188,7 +188,10 @@ end
 )
     end
   }
-
+use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+}
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
