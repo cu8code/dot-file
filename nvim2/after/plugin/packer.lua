@@ -42,5 +42,30 @@ return require('packer').startup(function(use)
   }
   use("folke/which-key.nvim")
   use("mbbill/undotree")
+  use { 'romgrk/barbar.nvim',
+    require = {
+      "nvim-tree/nvim-web-devicons"
+    }
+  }
   use 'kdheepak/lazygit.nvim'
+  use 'jacoborus/tender.vim'
+  use "catppuccin/nvim"
+  use "EdenEast/nightfox.nvim"
+  use { "nvim-lualine/lualine.nvim",
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use { "numToStr/Comment.nvim" }
+  use 'sunjon/shade.nvim'
+  use({ "ziontee113/color-picker.nvim",
+    config = function()
+      require("color-picker")
+    end,
+  })
+  use { 'glepnir/dashboard-nvim' }
+  use({ 'jakewvincent/mkdnflow.nvim',
+    rocks = 'luautf8',
+  })
+  use "ekickx/clipboard-image.nvim"
+  use "lewis6991/gitsigns.nvim"
+  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
 end)

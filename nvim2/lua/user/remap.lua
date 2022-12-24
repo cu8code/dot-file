@@ -41,4 +41,9 @@ vim.keymap.set('n', '<C-]>', ':BufferNext<CR>', opts)
 vim.keymap.set('n', '<C-x>', ':BufferClose<CR>', opts)
 
 
+-- deattach anything to the given key
 vim.keymap.set('n', '<Esc>', ':<CR>', opts)
+
+-- color picker
+vim.keymap.set("n", "<leader>c", "<cmd>PickColor<cr>", opts)
+vim.keymap.set("i", "<leader>c", "<cmd>PickColorInsert<cr>", opts)
