@@ -48,4 +48,3 @@ vim.keymap.set('n', '<Esc>', ':<CR>', opts)
 
 -- color picker
 vim.keymap.set("n", "<leader>c", "<cmd>PickColor<cr>", opts)
-vim.keymap.set("i", "<leader>c", "<cmd>PickColorInsert<cr>", opts)
