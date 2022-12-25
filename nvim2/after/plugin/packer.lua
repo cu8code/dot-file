@@ -62,9 +62,7 @@ return require('packer').startup(function(use)
     end,
   })
   use { 'glepnir/dashboard-nvim' }
-  use({ 'jakewvincent/mkdnflow.nvim',
-    rocks = 'luautf8',
-  })
+  use { "jakewvincent/mkdnflow.nvim", rocks = 'luauf8' }
   use "ekickx/clipboard-image.nvim"
   use "lewis6991/gitsigns.nvim"
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }

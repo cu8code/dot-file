@@ -13,9 +13,11 @@ vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
 vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>", opts)
-vim.keymap.set('n', '<leader>fg', ":Telescope git_files<CR>", opts)
+vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>", opts)
 vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", opts)
 vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", opts)
+
+-- workspace_diagnostics
 vim.keymap.set('n', '<leader>tw', ":TroubleToggle workspace_diagnostics<CR>", opts)
 
 -- FileSystem

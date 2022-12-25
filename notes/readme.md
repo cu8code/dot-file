@@ -1,2 +1,3 @@
 # Index
-[bookmarks](web/bookmakrs_.md)
+- [bookmarks](web/bookmakrs_.md)
+- [typscript](lang/typescript.md) 
