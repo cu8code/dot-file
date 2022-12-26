@@ -1,3 +1,5 @@
 # Index
-- [bookmarks](web/bookmakrs_.md)
+- [bookmarks](bookmakrs.md)
 - [typscript](lang/typescript.md) 
+- [youtube](youtubeScript.md)
+- [shell](./shell/index.md)

@@ -4,6 +4,7 @@
 ## ALL in ONE
 - [render](https://render.com/)
 - [cyclic](https://www.cyclic.sh/)
+- [versal](https://vercel.com/dashboard)
 
-## FrontEnd Helper
+## Frontend Helper
 - [svg-spinners](https://github.com/n3r4zzurr0/svg-spinners)
