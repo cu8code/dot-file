@@ -48,3 +48,6 @@ vim.keymap.set('n', '<Esc>', ':<CR>', opts)
 
 -- color picker
 vim.keymap.set("n", "<leader>c", "<cmd>PickColor<cr>", opts)
+
+-- filemanger
+vim.keymap.set("n","<leader>x",":NvimTreeFocus<cr>")

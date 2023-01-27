@@ -1,7 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/ankanroy/dot-file
-- /home/ankanroy/Github/moneytracker
+- /home/ankanroy/Github/locInfo
+- /home/ankanroy/Github/Codezilla
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false

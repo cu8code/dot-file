@@ -66,4 +66,11 @@ return require('packer').startup(function(use)
   use "ekickx/clipboard-image.nvim"
   use "lewis6991/gitsigns.nvim"
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 end)

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web/bookmakrs.md",
+                "file": "shell/git.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web/bookmakrs.md",
+                "file": "shell/git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web/bookmakrs.md",
+                "file": "shell/git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web/bookmakrs.md"
+                "file": "shell/git.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "fbf9ec50a4cded89",
   "lastOpenFiles": [
-    "web/bookmakrs.md",
+    "readme.md",
     "lang/typescript.md",
-    "readme.md"
+    "shell/git.md",
+    "web/bookmakrs.md"
   ]
 }

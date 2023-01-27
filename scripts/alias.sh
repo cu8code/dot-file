@@ -1,9 +1,10 @@
-alias note="cd $HOME/dot-file/notes/ && nvim ."
+alias note="cd $HOME/dot-file/notes/ && nvim readme.md"
 alias project="cd $HOME/Github/"
-alias nvimd="cd $HOME/.config/nvim && nvim ."
+alias nconf="cd $HOME/.config/nvim && nvim ."
 alias n="nvim"
-alias install="pkcon install"
-alias search="pkcon search"
+alias i="pkcon install"
+alias s="pkcon search"
+alias r-"pkcon remove"
 alias c="clear"
 alias l="exa -lah"
 alias ls=exa
@@ -18,3 +19,4 @@ take()
   mkdir -p $1
   cd $1
 }
+
