@@ -1,4 +1,4 @@
 require("user.remap")
 require("user.set")
 
-vim.cmd[[colorscheme tokyonight-day]]
+vim.cmd[[colorscheme tokyonight]]

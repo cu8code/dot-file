@@ -51,3 +51,10 @@ vim.keymap.set("n", "<leader>c", "<cmd>PickColor<cr>", opts)
 
 -- filemanger
 vim.keymap.set("n","<leader>x",":NvimTreeFocus<cr>")
+
+-- doc 
+vim.api.nvim_set_keymap("n", "<Leader>d", ":lua require('neogen').generate()<CR>", opts)
+
+-- diable key
+vim.keymap.set('n', 'q', ':<CR>', opts)
+vim.keymap.set('v', 'q', ':<CR>', opts)
