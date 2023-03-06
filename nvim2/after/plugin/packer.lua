@@ -93,6 +93,12 @@ return require('packer').startup(function(use)
         "KabbAmine/yowish.vim"
       }
       use{
-        "tjdevries/cyclist.vim"
+        "ellisonleao/gruvbox.nvim"
+      }
+      use {
+        "mg979/vim-visual-multi"
+      }
+      use {
+        "sainnhe/everforest"
       }
     end)

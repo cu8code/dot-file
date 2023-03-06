@@ -56,5 +56,6 @@ vim.keymap.set("n","<leader>x",":NvimTreeFocus<cr>")
 vim.api.nvim_set_keymap("n", "<Leader>d", ":lua require('neogen').generate()<CR>", opts)
 
 -- diable key
-vim.keymap.set('n', 'q', ':<CR>', opts)
-vim.keymap.set('v', 'q', ':<CR>', opts)
+vim.keymap.set('n', 'q', ':!sh ./build.sh<CR>', opts)
+vim.keymap.set('v', 'q', ':!sh ./build.sh<CR>', opts)
+
