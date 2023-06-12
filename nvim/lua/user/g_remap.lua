@@ -27,3 +27,6 @@ vim.keymap.set('n','1',function() ui.nav_file(1) end)
 vim.keymap.set('n','2',function() ui.nav_file(2) end)
 vim.keymap.set('n','3',function() ui.nav_file(3) end)
 vim.keymap.set('n','4',function() ui.nav_file(4) end)
+
+-- File System
+vim.keymap.set('n','<C-e>',':Ex<cr>')
