@@ -24,10 +24,7 @@ return require('packer').startup(function(use)
 
       use {
           "folke/trouble.nvim",
-          requires = "kyazdani42/nvim-web-devicons",
-          config = function()
-            require("trouble").setup {}
-          end
+          requires = "kyazdani42/nvim-web-devicons"
       }
 
       use("folke/which-key.nvim")
@@ -50,8 +47,8 @@ return require('packer').startup(function(use)
 
       if packer_bootstrap then
         require('packer').sync()
+      else
+        require("user")
       end
-
-      require("user")
 
     end)
