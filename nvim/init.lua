@@ -1,16 +1,57 @@
--- Check if Packer is installed
-local packer_install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
-if vim.fn.empty(vim.fn.glob(packer_install_path)) > 0 then
-  -- Packer is not installed, download it
-  vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim '..packer_install_path)
-  vim.api.nvim_command('packadd packer.nvim')
-  require('packer').compile()
-  print('Packer plugins compiled!')
-  print('Packer.nvim installed successfully!')
-else
-  -- Packer is already installed
-  print('Packer.nvim is already installed.')
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
 end
 
-require("user")
+local packer_bootstrap = ensure_packer()
+
+return require('packer').startup(function(use)
+
+      use('wbthomason/packer.nvim')
+
+      use {
+          'nvim-telescope/telescope.nvim', tag = '0.1.0',
+          requires = { { 'nvim-lua/plenary.nvim' } }
+      }
+
+      use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
+      use {
+          "folke/trouble.nvim",
+          requires = "kyazdani42/nvim-web-devicons",
+          config = function()
+            require("trouble").setup {}
+          end
+      }
+
+      use("folke/which-key.nvim")
+
+      -- theme
+      use('folke/tokyonight.nvim')
+      use 'jacoborus/tender.vim'
+      use "catppuccin/nvim"
+      use "EdenEast/nightfox.nvim"
+      use { "KabbAmine/yowish.vim" }
+      use { "sainnhe/everforest" }
+      -- end
+
+      use { "nvim-lualine/lualine.nvim",
+          requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+      }
+      use { "numToStr/Comment.nvim" }
+      use { "lewis6991/gitsigns.nvim" }
+
+
+      if packer_bootstrap then
+        require('packer').sync()
+      end
+
+      require("user")
+
+    end)
