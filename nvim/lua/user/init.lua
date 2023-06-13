@@ -3,6 +3,7 @@ require("user.conf_gitsign")
 require("user.conf_listchars")
 require("user.conf_telescope")
 require("user.conf_treesitter")
+require("user.conf_lsp_zero")
 
 require("user.g_remap")
 require("user.g_set")

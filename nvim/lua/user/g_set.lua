@@ -42,4 +42,11 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd([[
+  augroup numbertoggle
+    autocmd!
+    autocmd InsertEnter * set relativenumber
+    autocmd InsertLeave * set norelativenumber
+  augroup END
+]])
 
